@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+from gendiff.brains import generate_diff
 
 parser = argparse.ArgumentParser(
     prog='gendiff',
@@ -11,8 +12,9 @@ parser.add_argument('-f', '--format', help='set format of output')
 
 
 def main():
-    parser.print_help()
-
+    args = parser.parse_args()
+    diff = generate_diff(args.first_file, args.second_file)
+    print(diff)  
 
 if __name__ == '__main__':
     main()
