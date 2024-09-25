@@ -5,3 +5,4 @@
 [![.github/workflows/pythonCI.yml](https://github.com/Detya9/python-project-50/actions/workflows/pythonCI.yml/badge.svg)](https://github.com/Detya9/python-project-50/actions/workflows/pythonCI.yml)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/add64477968235a49633/test_coverage)](https://codeclimate.com/github/Detya9/python-project-50/test_coverage)
 [![asciicast](https://asciinema.org/a/h5LuF53hGP7AdJa7IbHZhpxAt.svg)](https://asciinema.org/a/h5LuF53hGP7AdJa7IbHZhpxAt)
+[![asciicast](https://asciinema.org/a/JF0OO5q4cgi67mHuTmjwKuFiU.svg)](https://asciinema.org/a/JF0OO5q4cgi67mHuTmjwKuFiU)
