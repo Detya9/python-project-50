@@ -13,7 +13,12 @@ parser.add_argument('-f', '--format', help='set format of output')
 
 def main():
     args = parser.parse_args()
-    diff = generate_diff(args.first_file, args.second_file)
+    if args.format == 'stylish':
+        diff = generate_diff(args.first_file, args.second_file, 'stylish')
+    elif args.format == 'plain':
+        diff = generate_diff(args.first_file, args.second_file, 'plain')
+    else:
+        diff = generate_diff(args.first_file, args.second_file)
     print(diff)
 
 

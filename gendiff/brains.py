@@ -1,5 +1,6 @@
 from gendiff.file_parser import parser
-import gendiff.formatter as formatter
+import gendiff.formatter.stylish as stylish
+import gendiff.formatter.plain as plain
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):  # noqa: max-complexity=10
@@ -26,4 +27,6 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):  # noqa: max-c
     diff = walk(file1, file2, {})
     match format_name:
         case 'stylish':
-            return formatter.get_stylish(diff)
+            return stylish.get_stylish(diff)
+        case 'plain':
+            return plain.get_plain(diff, [])
