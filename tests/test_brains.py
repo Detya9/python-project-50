@@ -1,4 +1,6 @@
 from gendiff import generate_diff
+import json
+from json.decoder import JSONDecodeError
 
 
 def test_generate_diff():
@@ -19,8 +21,8 @@ def test_generate_diff():
         assert generate_diff(json2_path, yml1_path) == stylish2
         assert generate_diff(json1_path, yml2_path, 'plain') == plain1
         data = generate_diff(json1_path, yml2_path, 'json')
-        
+
         try:
             json.loads(data)
-        except:
+        except JSONDecodeError:
             print("An exception occurred")

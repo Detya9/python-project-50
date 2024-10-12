@@ -21,3 +21,6 @@ test:
 
 test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml
+
+lint-tests:
+	poetry run flake8 tests
