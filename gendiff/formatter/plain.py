@@ -27,5 +27,7 @@ def to_complex(item):
             return 'true'
         case False:
             return 'false'
+        case int():
+            return item
         case _:
             return f"'{item}'"
