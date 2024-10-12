@@ -1,6 +1,7 @@
 from gendiff.file_parser import parser
 import gendiff.formatter.stylish as stylish
 import gendiff.formatter.plain as plain
+import gendiff.formatter.json as json
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):  # noqa: max-complexity=10
@@ -30,3 +31,5 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):  # noqa: max-c
             return stylish.get_stylish(diff)
         case 'plain':
             return plain.get_plain(diff, [])
+        case 'json':
+            return json.get_json(diff)
