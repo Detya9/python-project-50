@@ -6,18 +6,18 @@ def get_plain(tree, array):
             result.append(get_plain(value['value'], array))
         elif value['type'] == 'changed':
             result.append(f"Property \'{'.'.join(array)}\' was updated."
-                          f" From {to_complex(value['old'])}"
-                          f" to {to_complex(value['new'])}")
+                          f" From {to_str(value['old'])}"
+                          f" to {to_str(value['new'])}")
         elif value['type'] == 'removed':
             result.append(f"Property \'{'.'.join(array)}\' was removed")
         elif value['type'] == 'added':
             result.append(f"Property \'{'.'.join(array)}\' was added with "
-                          f"value: {to_complex(value['value'])}")
+                          f"value: {to_str(value['value'])}")
         array.pop()
     return '\n'.join(result)
 
 
-def to_complex(item):
+def to_str(item):
     match item:
         case dict():
             return '[complex value]'
