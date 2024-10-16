@@ -1,2 +1,2 @@
-from gendiff.brains import generate_diff
-from gendiff.file_parser import get_python_dict
+from gendiff.gendiff import generate_diff
+from gendiff.file_parser import get_content

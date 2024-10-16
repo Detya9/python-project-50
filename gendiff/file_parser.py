@@ -2,7 +2,7 @@ import json
 import yaml
 
 
-def get_python_dict(file_path):
+def get_content(file_path):
     *_, file_format = file_path.split('.')
     with open(file_path, encoding='utf-8') as file:
         return parse(file, file_format)

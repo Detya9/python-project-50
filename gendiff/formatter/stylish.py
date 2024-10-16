@@ -42,12 +42,9 @@ def to_typify(dictionary):
 
 
 def cancel_json_translations(item):
-    match item:
-        case None:
-            return 'null'
-        case True:
-            return 'true'
-        case False:
-            return 'false'
-        case _:
-            return item
+    if item is None:
+        return 'null'
+    elif isinstance(item, bool):
+        return str(item).lower()
+    else:
+        return item

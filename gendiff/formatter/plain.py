@@ -18,16 +18,13 @@ def get_plain(tree, array):
 
 
 def to_str(item):
-    match item:
-        case dict():
-            return '[complex value]'
-        case None:
-            return 'null'
-        case True:
-            return 'true'
-        case False:
-            return 'false'
-        case int():
-            return item
-        case _:
-            return f"'{item}'"
+    if isinstance(item, dict):
+        return '[complex value]'
+    elif item is None:
+        return 'null'
+    elif isinstance(item, bool):
+        return str(item).lower()
+    elif isinstance(item, int):
+        return item
+    else:
+        return f"'{item}'"
