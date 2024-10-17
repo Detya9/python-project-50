@@ -14,3 +14,5 @@ def parse(content, file_format):
             return json.load(content)
         case 'yml' | 'yaml':
             return yaml.safe_load(content)
+        case _:
+            raise ValueError(f'Wrong {file_format}')
