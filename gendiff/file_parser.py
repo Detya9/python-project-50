@@ -15,4 +15,4 @@ def parse(content, file_format):
         case 'yml' | 'yaml':
             return yaml.safe_load(content)
         case _:
-            raise ValueError(f'Wrong file extension')
+            raise ValueError('Wrong file extension')
