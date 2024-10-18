@@ -12,4 +12,4 @@ def apply_format(tree, format_name):
         case 'json':
             return json.get_json(tree)
         case _:
-            raise ValueError(f'Wrong {format_name}')
+            raise ValueError(f'Wrong format')
